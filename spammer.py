@@ -1,6 +1,10 @@
 import pyautogui,time
 
 def tag(n,name, message):
+      '''
+      Enter the number of times needed to tag the person, first few letters of the name of the contact saved
+      and also the message that you want to mention in the tag.
+      '''
       time.sleep(1)
       for i in range(n):
             pyautogui.typewrite("@"+name)
@@ -9,6 +13,9 @@ def tag(n,name, message):
             pyautogui.press("enter")
 
 def songspam(filename):
+      '''
+      store the lyrics in a file and then store this file in the same directory of the .py file filename is a string with the name of the .txt file
+      '''
       f = open(filename)
       a = f.readlines()
       time.sleep(5)
@@ -17,10 +24,11 @@ def songspam(filename):
             pyautogui.press("enter")
       f.close()
 
-def deletespam(n):
+def deletespam(n,msg):
+      ''' A function to enter a message, delete it n times, takes an int and a string, the whatsapp must be in full screen with resolution 1920X1080'''     
       time.sleep(5)
       for i in range(n):
-            pyautogui.typewrite("ok")
+            pyautogui.typewrite(msg)
             pyautogui.press("enter")
             time.sleep(0.5)
             pyautogui.moveTo(1769,907,0.1)
