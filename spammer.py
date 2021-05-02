@@ -38,3 +38,7 @@ def deletespam(n,msg):
             pyautogui.moveTo(1051,647,0.1)
             pyautogui.click(1051,647)
             time.sleep(0.5)
+
+if __name__ =='__main__': 
+    #main block
+    deletespam(5, "dumbo")
