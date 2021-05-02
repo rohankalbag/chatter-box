@@ -39,6 +39,30 @@ def deletespam(n,msg):
             pyautogui.click(1051,647)
             time.sleep(0.5)
 
+def emojipyramid(n):
+      time.sleep(5)
+      for i in range(1,n+1):
+            pyautogui.keyDown('shift')
+            pyautogui.keyDown('tab')
+            time.sleep(0.1)
+            pyautogui.keyUp('shift')
+            pyautogui.keyUp('tab')
+            pyautogui.press("enter")
+            for j in range(1,i+1):
+                  pyautogui.keyDown('shift')
+                  pyautogui.keyDown('tab')
+                  time.sleep(0.1)
+                  pyautogui.keyUp('shift')
+                  pyautogui.keyUp('tab')
+                  time.sleep(0.1)
+                  pyautogui.press("down")
+                  pyautogui.press('right')
+                  time.sleep(0.1)
+                  pyautogui.press('enter')
+            pyautogui.press("enter")
+            time.sleep(0.3)
+
+
 if __name__ =='__main__': 
     #main block
-    deletespam(5, "dumbo")
+    print("hello world!")
