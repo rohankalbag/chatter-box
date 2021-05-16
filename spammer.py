@@ -62,7 +62,3 @@ def emojipyramid(n):
             pyautogui.press("enter")
             time.sleep(0.3)
 
-
-if __name__ =='__main__': 
-    #main block
-    tag(15, 'Aabir', 'Sup')
