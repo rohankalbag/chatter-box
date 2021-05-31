@@ -65,4 +65,4 @@ def emojipyramid(n):
 
 if __name__ =='__main__': 
     #main block
-    tag(15, 'Aabir', 'Sup')
+    print("Hello World")
