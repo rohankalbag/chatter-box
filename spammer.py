@@ -1,4 +1,22 @@
 import pyautogui,time
+import random
+messages = [
+      ['Shadab', 'Happy Birthday'],
+      ['Aabir', 'Wheres the treat bro!'],
+      ['Prannav', 'Where u at?'],
+      ['Jay','Innocent Baccha'],
+      ['Shreyas','Hi boi, sup?'],
+      ['Suyash', 'Pashuuuu'],
+      ['Atharva Ch','Where u at????'],
+      ['Aadya','Come spam'],
+      ["Radhika",'Congratulations'],
+      ['Ashish','Treat bhaiii!!!'],
+      ["Jash",'Where are you bro?'],
+      ['Pranav','Forward Karna Paap hai'],
+      ['Yogesh','Campus tour bro!!'],
+      ['Jathin','Where u at?'],
+      ["Lyric",'Hi brooo']
+      ]
 
 def tag(n,name, message):
       '''
@@ -62,3 +80,7 @@ def emojipyramid(n):
             pyautogui.press("enter")
             time.sleep(0.3)
 
+def randomisespam(n):
+      for i in range(n):
+            j = random.randint(0,len(messages)-1)
+            tag(1,messages[j][0],messages[j][1])
