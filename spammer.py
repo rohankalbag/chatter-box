@@ -69,4 +69,4 @@ def randomisespam(n):
       for i in range(n):
             j = random.randint(0,len(people)-1)
             k = random.randint(0,len(messages)-1)
-            tag(1, people[i], messages[i])
+            tag(1, people[j], messages[k])
