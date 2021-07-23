@@ -1,22 +1,6 @@
 import pyautogui,time
 import random
-messages = [
-      ['Shadab', 'Happy Birthday'],
-      ['Aabir', 'Wheres the treat bro!'],
-      ['Prannav', 'Where u at?'],
-      ['Jay','Innocent Baccha'],
-      ['Shreyas','Hi boi, sup?'],
-      ['Suyash', 'Pashuuuu'],
-      ['Atharva Ch','Where u at????'],
-      ['Aadya','Come spam'],
-      ["Radhika",'Congratulations'],
-      ['Ashish','Treat bhaiii!!!'],
-      ["Jash",'Where are you bro?'],
-      ['Pranav','Forward Karna Paap hai'],
-      ['Yogesh','Campus tour bro!!'],
-      ['Jathin','Where u at?'],
-      ["Lyric",'Hi brooo']
-      ]
+import csv
 
 def tag(n,name, message):
       '''
@@ -57,30 +41,32 @@ def deletespam(n,msg):
             pyautogui.click(1051,647)
             time.sleep(0.5)
 
-def emojipyramid(n):
-      time.sleep(5)
-      for i in range(1,n+1):
-            pyautogui.keyDown('shift')
-            pyautogui.keyDown('tab')
-            time.sleep(0.1)
-            pyautogui.keyUp('shift')
-            pyautogui.keyUp('tab')
+def emojipyramid(n,emoji_name):
+      '''n is the no of rows of the emoji pyramid that you want, and emoji_name is the string version of emoji 
+         for example for smile with pain (:pain)'''
+      time.sleep(3)
+      for i in range(0,n):
+            for j in range(0,i+1):
+                  pyautogui.typewrite(emoji_name)
+                  time.sleep(0.1)
+                  pyautogui.press("enter")
+            time.sleep(1)
             pyautogui.press("enter")
-            for j in range(1,i+1):
-                  pyautogui.keyDown('shift')
-                  pyautogui.keyDown('tab')
-                  time.sleep(0.1)
-                  pyautogui.keyUp('shift')
-                  pyautogui.keyUp('tab')
-                  time.sleep(0.1)
-                  pyautogui.press("down")
-                  pyautogui.press('right')
-                  time.sleep(0.1)
-                  pyautogui.press('enter')
-            pyautogui.press("enter")
-            time.sleep(0.3)
 
 def randomisespam(n):
+      #n is the no of times you want to spam
+      ''' Save the name of your contact (first few letters also works) and message value pairs in a csv file called data.csv stored in same directory
+          for example
+          name1, message1,
+          name2, message2,
+          '''
+      f = open("data.csv",'r')
+      data = csv.reader(f)
+      people, messages = [],[]
+      for line in data:
+            people += [line[0]]
+            messages += [line[1]]
       for i in range(n):
-            j = random.randint(0,len(messages)-1)
-            tag(1,messages[j][0],messages[j][1])
+            j = random.randint(0,len(people)-1)
+            k = random.randint(0,len(messages)-1)
+            tag(1, people[i], messages[i])
