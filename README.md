@@ -9,7 +9,9 @@ A library for **automated repetitive** messaging tasks for **WhatsApp Desktop** 
 - Open Web WhatsApp/WhatsApp Desktop and download [spammer.py](https://github.com/rohankalbag/ChatterBox/blob/main/spammer.py) 
 - Install PyAutoGUI
 
-```bash pip install pyautogui```
+```bash 
+pip install pyautogui
+```
 
 - Create a driver code block
 
