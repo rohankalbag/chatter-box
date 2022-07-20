@@ -1,10 +1,22 @@
-# Web Whatsapp Spammer
-A library to spam whatsapp.
-keep web whatsapp running, use the contents of this to spam chats on whatsapp
+# Chatter Box
 
-<h2>Prerequisites</h2>
-<ul>
-<li>Python 3.x</li>
-<li>Web Whatsapp Application</li>
-<li>pyautogui library (use command pip install pyautogui if you don't have it)</li>
-</ul>
+## Self Project
+
+A library for **automated repetitive** messaging tasks for **WhatsApp Desktop** using `PyAutoGUI`
+
+## Instructions for Usage
+
+- Open Web WhatsApp/WhatsApp Desktop and download `spammer.py` 
+- Install PyAutoGUI
+> ```bash pip install pyautogui```
+
+- Create a driver code block
+> ```python
+if __name__ == "__main__":
+  #your code goes here
+  function1_call()
+  function2_call()
+```
+- Make use of the functions in `spammer.py` using their documentation
+- Modify the $x$ and $y$ coordinates of the send button in the various functions to make them compatible with your display
+- Perform **automated repetitive** messaging tasks a.k.a spam your chats with stickers/text and enjoy
