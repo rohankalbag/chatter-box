@@ -18,6 +18,7 @@ pip install pyautogui
 ```python
 if __name__ == "__main__":
   #your code goes here
+  # function1_call and function2_call are functions in spammer.py
   function1_call()
   function2_call()
 ```
